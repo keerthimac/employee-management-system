@@ -1,14 +1,14 @@
-package com.mac.ems.service;
+package com.mac.ems.service.custom.impl;
 
 import com.mac.ems.repository.DepartmentRepo;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DepartmentService {
+public class DepartmentServiceImpl {
 
     DepartmentRepo repository;
 
-    public DepartmentService(DepartmentRepo repository) {
+    public DepartmentServiceImpl(DepartmentRepo repository) {
         this.repository = repository;
     }
 }
