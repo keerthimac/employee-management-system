@@ -1,4 +1,7 @@
 package com.mac.ems.repository;
 
-public interface EmployeeRepo {
+import com.mac.ems.entity.EmployeeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepo extends JpaRepository<EmployeeEntity, Integer> {
 }

@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class EmployeeDto {
+    int id;
     String firstName;
     String lastName;
     String email;

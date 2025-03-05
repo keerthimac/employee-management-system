@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "employee-management-system"
+  datasource:
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+    url: "jdbc:mysql://localhost/test_db"
+    username: "root"
+    password: "root"
+  jpa:
+    hibernate:
+      ddl-auto: "create"
+      show-sql: true
+server:
+  port: 8080
