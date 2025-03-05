@@ -52,6 +52,15 @@ public class EmployeeServiceImpl implements EmployeeService {
         return null;
     }
 
+    public List<EmployeeDto> findByFirstName(String firstName) {
+        List<EmployeeEntity> byFirstName = repository.findByFirstName(firstName);
+        List<EmployeeDto> employeeDtoList = new ArrayList<EmployeeDto>();
+        byFirstName.forEach(employeeEntity -> {
+            employeeDtoList.add(new ObjectMapper().convertValue(employeeEntity,EmployeeDto.class));
+        });
+        return employeeDtoList;
+    }
+
     @Override
     public EmployeeDto updateEmployee(EmployeeDto employeeDto) {
         Optional<EmployeeEntity> byId = repository.findById(employeeDto.getId());

@@ -37,6 +37,12 @@ public class EmployeeContoller {
         return ResponseEntity.ok().body(employee);
     }
 
+    @GetMapping("get-by-first-name/{firstName}")
+    public ResponseEntity findByFirstName(@PathVariable("firstName") String firstName){
+        List<EmployeeDto> employeeDtoList = service.findByFirstName(firstName);
+        return ResponseEntity.ok().body(employeeDtoList);
+    }
+
     @PutMapping("update")
     public ResponseEntity updateEmployee(@RequestBody EmployeeDto employeeDto){
         EmployeeDto updatedEmployee = service.updateEmployee(employeeDto);
