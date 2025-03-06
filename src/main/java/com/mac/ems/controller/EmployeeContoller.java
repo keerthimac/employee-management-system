@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/employee")
 @RequiredArgsConstructor
+@CrossOrigin
 public class EmployeeContoller {
 
     final EmployeeServiceImpl service;

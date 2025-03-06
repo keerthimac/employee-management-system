@@ -20,8 +20,6 @@ d
 4src/main/java/com/mac/ems/entity/EmployeeEntity.java,e\a\ea81a3dd45622dbfb7a1888c7485889c6e497412
 f
 6src/main/java/com/mac/ems/repository/EmployeeRepo.java,6\c\6cc660d3d43a8d0b6445732ec5e8087baf000c32
-f
-6src/main/java/com/mac/ems/service/EmployeeService.java,0\8\08a0e1d45b6571d56894edcbf0c512fa978803d8
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
@@ -44,12 +42,6 @@ b
 2src/main/java/com/mac/ems/repository/UserRepo.java,b\2\b2861952ffd2dbaaea420ebfeb9e234def1e28b8
 b
 2src/main/java/com/mac/ems/repository/RoleRepo.java,c\3\c3e28e9da53a334f0e775218b07d05d5ed8513ce
-h
-8src/main/java/com/mac/ems/service/DepartmentService.java,6\2\62c47a2082e00610bc2c361eaed11834ed20bdaa
-b
-2src/main/java/com/mac/ems/service/RoleService.java,a\5\a5ede5c5dbc47bdeb702cbb3ba8fc9bdf08567c1
-b
-2src/main/java/com/mac/ems/service/UserService.java,2\b\2bf94bab30ff5f640fee811ba3159d4798a6e63c
 n
 >src/main/java/com/mac/ems/controller/DepartmentController.java,2\0\2098541b9f705956ac6b1621497d3066c4e98fe2
 h
@@ -62,12 +54,8 @@ _
 /src/main/java/com/mac/ems/service/Services.java,1\9\1967f8aae8235a3815164191a4827f1b60ba5e91
 m
 =src/main/java/com/mac/ems/service/custom/EmployeeService.java,e\3\e3eb9289af523aa8ba0b9a4aec59ef3704b1bee7
-j
-:src/main/java/com/mac/ems/service/EmployeeServiceImpl.java,e\0\e05328d7eb527ae59ea8ebff9f8e27597ea16397
 v
 Fsrc/main/java/com/mac/ems/service/custom/impl/EmployeeServiceImpl.java,a\0\a0ddb791e5a63165694c94b2a0b7b6143937d208
-t
-Dsrc/main/java/com/mac/ems/service/custom/impl/DepartmentService.java,4\e\4eef8e1fd767263bf9a0c460cce8c1e799d8fada
 o
 ?src/main/java/com/mac/ems/service/custom/DepartmentService.java,e\8\e81c94e247f7e64f4ea5ecf2383d3f563239c92c
 i
