@@ -27,34 +27,35 @@ public class EmployeeContoller {
     }
 
     @GetMapping("get-all")
-    public ResponseEntity getEmployees(){
+    public ResponseEntity<?> getEmployees(){
         List<EmployeeDto> allEmployees = service.getAllEmployees();
         return ResponseEntity.ok().body(allEmployees);
     }
 
     @GetMapping("get/{id}")
-    public ResponseEntity getEmployee(@PathVariable("id") int id){
+    public ResponseEntity<?> getEmployee(@PathVariable("id") int id){
         EmployeeDto employee = service.getEmployee(id);
         return ResponseEntity.ok().body(employee);
     }
 
     @GetMapping("get-by-first-name/{firstName}")
-    public ResponseEntity findByFirstName(@PathVariable("firstName") String firstName){
+    public ResponseEntity<?> findByFirstName(@PathVariable("firstName") String firstName){
         List<EmployeeDto> employeeDtoList = service.findByFirstName(firstName);
         return ResponseEntity.ok().body(employeeDtoList);
     }
 
     @PutMapping("update")
-    public ResponseEntity updateEmployee(@RequestBody EmployeeDto employeeDto){
+    public ResponseEntity<?> updateEmployee(@RequestBody EmployeeDto employeeDto){
         EmployeeDto updatedEmployee = service.updateEmployee(employeeDto);
-        return ResponseEntity.accepted().body(updatedEmployee);
+        if(updatedEmployee == null) return new ResponseEntity<>("Employee Not Found",HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(updatedEmployee,HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity deleteEmployee(@PathVariable("id") int id){
+    public ResponseEntity<String> deleteEmployee(@PathVariable("id") int id){
         boolean isDeleted = service.deleteEmployee(id);
-        if(isDeleted) return ResponseEntity.ok("Employee Deleted");
-        return ResponseEntity.badRequest().body("Employee Not Deleted");
+        if(isDeleted) return new ResponseEntity<>("Employee Deleted",HttpStatus.OK);
+        return new ResponseEntity<>("Employee Not Found",HttpStatus.NOT_FOUND);
     }
 
 

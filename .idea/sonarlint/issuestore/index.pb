@@ -68,3 +68,5 @@ r
 Bsrc/main/java/com/mac/ems/service/custom/impl/UserServiceImpl.java,a\1\a1933afd5ef399993b298ed302b1e4f671f81954
 r
 Bsrc/main/java/com/mac/ems/service/custom/impl/RoleServiceImpl.java,0\2\02896315c8b2fcd768920b8e5f876465de878e89
+S
+#src/main/resources/application.yaml,8\b\8bf9a0c76cee89021a19081a2d70237db7e2fd8a
